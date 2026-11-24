@@ -66,7 +66,71 @@
       .orbit { width: 340px; }
       .cards { grid-template-columns: 1fr; }
       .contact { align-items: flex-start; flex-direction: column; }
+   }
+    /* RILQORA NEON CYBER DESIGN */
+
+body {
+    background:
+        radial-gradient(ellipse at 15% 10%, #063b50 0%, transparent 40%),
+        radial-gradient(ellipse at 85% 80%, #101b50 0%, transparent 40%),
+        #050914;
+    color: #e8faff;
+}
+
+header {
+    background: rgba(3, 12, 27, 0.9);
+    border-bottom: 1px solid rgba(0, 220, 255, 0.35);
+    backdrop-filter: blur(12px);
+}
+
+h1, h2, .section-title {
+    text-shadow: 0 0 15px rgba(0, 220, 255, 0.45);
+}
+
+.card {
+    background: linear-gradient(145deg, #0c1b30, #07111f);
+    border: 1px solid rgba(0, 220, 255, 0.3);
+    box-shadow: 0 0 18px rgba(0, 180, 255, 0.08);
+    transition: 0.3s ease;
+    animation: neonAppear 0.8s ease both;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #00eaff;
+    box-shadow: 0 0 25px rgba(0, 220, 255, 0.3);
+}
+
+.button, a.button {
+    background: linear-gradient(90deg, #0077ff, #00d9e8);
+    color: white;
+    border: 1px solid #00eaff;
+    box-shadow: 0 0 15px rgba(0, 220, 255, 0.3);
+    transition: 0.3s ease;
+}
+
+.button:hover, a.button:hover {
+    box-shadow: 0 0 25px #00cfff;
+    transform: scale(1.04);
+}
+
+@keyframes neonAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
   </style>
 </head>
 <body>
