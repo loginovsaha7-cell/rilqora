@@ -153,6 +153,23 @@ h1, h2, .section-title {
     color: #00eaff;
     text-shadow: 0 0 10px #00eaff;
 }
+    /* RILQORA LOGO ANIMATION */
+@keyframes rilqoraGlow {
+    0% {
+        opacity: 0;
+        transform: translateY(15px) scale(0.95);
+        text-shadow: 0 0 0 transparent;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 18px #00eaff;
+    }
+}
+
+.rilqora-animated {
+    animation: rilqoraGlow 1.5s ease-out both;
+}
   </style>
 </head>
 <body>
@@ -174,7 +191,7 @@ h1, h2, .section-title {
   <main id="home">
     <div class="wrap hero">
       <div>
-        <span class="eyebrow">RILQORA TECHNOLOGIES</span>
+        <span class="eyebrow rilqora-animated">RILQORA TECHNOLOGIES</span>
         <h1><span data-ru="Наше будущее" data-en="Our Future"></span> — <span><span data-ru="технологии." data-en="  Technology."></span>.</span></h1>
         <p class="lead">Создаём цифровые проекты, изучаем искусственный интеллект и разрабатываем полезные программные решения.</p>
         <div class="actions"><a class="button" href="#services">Наши направления →</a><a class="secondary" href="#about">Узнать о нас</a></div>
@@ -254,6 +271,89 @@ function setLanguage(lang) {
 
     document.documentElement.lang = lang;
 }
+</script>
+  <section id="rilqora-terminal" style="
+    background:#050b14;
+    border:1px solid #00d9ff;
+    border-radius:14px;
+    padding:22px;
+    margin:50px auto;
+    max-width:850px;
+    box-shadow:0 0 22px #00d9ff33;
+    color:#00eaff;
+    font-family:monospace;
+">
+    <h2>RILQORA TERMINAL</h2>
+    <p style="color:#7c91a8">System console | Version 1.0</p>
+
+    <div id="terminal-output" style="
+        min-height:160px;
+        max-height:250px;
+        overflow-y:auto;
+        background:#02060b;
+        padding:14px;
+        border-radius:8px;
+        color:#00ff9d;
+        white-space:pre-wrap;
+    ">RILQORA TECHNOLOGIES [Version 1.0]
+Welcome to RILQORA Terminal.
+Type 'help' to see commands.</div>
+
+    <div style="display:flex;gap:8px;margin-top:12px">
+        <span style="padding-top:10px">RILQORA&gt;</span>
+        <input id="terminal-input"
+            placeholder="Введите команду..."
+            style="flex:1;min-width:0;background:#101b29;
+            color:#00eaff;border:1px solid #17617a;
+            padding:10px;border-radius:6px;outline:none;">
+        <button onclick="runRilqoraCommand()"
+            style="background:#00d9ff;color:#001018;
+            border:0;padding:10px 16px;border-radius:6px;
+            cursor:pointer;font-weight:bold;">
+            RUN
+        </button>
+    </div>
+</section>
+
+<script>
+function runRilqoraCommand() {
+    const input = document.getElementById("terminal-input");
+    const output = document.getElementById("terminal-output");
+    const command = input.value.trim().toLowerCase();
+
+    if (!command) return;
+
+    let response = "";
+
+    switch(command) {
+        case "help":
+            response = "Available commands:\nhelp\nabout\nproducts\nversion\nclear";
+            break;
+        case "about":
+            response = "RILQORA TECHNOLOGIES\nOur future — technology.";
+            break;
+        case "products":
+            response = "RILQORA SYSTEM MONITOR 1.0";
+            break;
+        case "version":
+            response = "RILQORA TERMINAL 1.0";
+            break;
+        case "clear":
+            output.textContent = "";
+            input.value = "";
+            return;
+        default:
+            response = "Unknown command. Type 'help'.";
+    }
+
+    output.textContent += "\n\nRILQORA> " + command + "\n" + response;
+    output.scrollTop = output.scrollHeight;
+    input.value = "";
+}
+
+document.getElementById("terminal-input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") runRilqoraCommand();
+});
 </script>
 </body>
 </html>
