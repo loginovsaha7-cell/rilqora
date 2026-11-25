@@ -131,6 +131,28 @@ h1, h2, .section-title {
         transition: none !important;
     }
 }
+    .language-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+    color: #00eaff;
+}
+
+.language-switch button {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.language-switch button.active {
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
   </style>
 </head>
 <body>
@@ -141,6 +163,11 @@ h1, h2, .section-title {
         <div class="links"><a href="#about">О компании</a><a href="#services">Направления</a><a href="#contact">Контакты</a></div>
         <a class="button" href="#contact">Связаться</a>
       </nav>
+      <div class="language-switch">
+    <button onclick="setLanguage('ru')" id="lang-ru" class="active">RU</button>
+    <span>|</span>
+    <button onclick="setLanguage('en')" id="lang-en">EN</button>
+</div>
     </div>
   </header>
 
@@ -148,7 +175,7 @@ h1, h2, .section-title {
     <div class="wrap hero">
       <div>
         <span class="eyebrow">RILQORA TECHNOLOGIES</span>
-        <h1>Наше будущее — <span>технологии.</span></h1>
+        <h1><span data-ru="Наше будущее" data-en="Our Future"></span> — <span><span data-ru=" — технологии." data-en=" — Technology."></span>.</span></h1>
         <p class="lead">Создаём цифровые проекты, изучаем искусственный интеллект и разрабатываем полезные программные решения.</p>
         <div class="actions"><a class="button" href="#services">Наши направления →</a><a class="secondary" href="#about">Узнать о нас</a></div>
       </div>
@@ -216,5 +243,17 @@ h1, h2, .section-title {
 
   <footer><div class="wrap">© <span id="year"></span> RILQORA Technologies. Учебный проект.</div></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+function setLanguage(lang) {
+    document.querySelectorAll('[data-ru][data-en]').forEach(element => {
+        element.textContent = element.getAttribute('data-' + lang);
+    });
+
+    document.getElementById('lang-ru').classList.toggle('active', lang === 'ru');
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+
+    document.documentElement.lang = lang;
+}
+</script>
 </body>
 </html>
