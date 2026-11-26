@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d1b">
+<meta name="description" content="NELVARIS Technologies — Software, AI and digital innovation.">
+<title>NELVARIS Technologies</title>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+ font-family:Arial,sans-serif;
+ background:#080d1b;
+ color:#f2f6ff;
+ line-height:1.6;
+}
+header{
+ display:flex;justify-content:space-between;
+ align-items:center;padding:22px 8%;
+ border-bottom:1px solid #1b2940;
+}
+.logo{font-size:25px;font-weight:800;color:#54d8ff}
+.logo span{display:block;font-size:10px;letter-spacing:4px;color:#a8b9d2}
+nav a{color:#b8c8df;text-decoration:none;margin-left:22px}
+nav a:hover{color:#54d8ff}
+.hero{
+ min-height:75vh;display:flex;flex-direction:column;
+ justify-content:center;align-items:center;text-align:center;
+ padding:50px 20px;
+ background:radial-gradient(ellipse at center,#102b48 0%,#080d1b 65%);
+}
+.hero h1{font-size:clamp(42px,8vw,78px);letter-spacing:5px}
+.hero h1 span{color:#54d8ff}
+.hero p{max-width:650px;color:#aabbd2;margin:20px 0;font-size:18px}
+.btn{
+ display:inline-block;padding:13px 25px;border-radius:8px;
+ background:#54d8ff;color:#06101d;text-decoration:none;
+ font-weight:bold;margin-top:15px;
+}
+section{padding:75px 8%}
+h2{font-size:32px;margin-bottom:25px;color:#54d8ff}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{
+ background:#101a2c;border:1px solid #243751;
+ border-radius:14px;padding:25px;
+}
+.card h3{color:#54d8ff;margin-bottom:10px}
+.card p{color:#aabbd2}
+footer{
+ text-align:center;padding:30px;color:#8193ad;
+ border-top:1px solid #1b2940;
+}
+@media(max-width:600px){
+ header{flex-direction:column;gap:15px}
+ nav a{margin:0 8px}
+}
+</style>
+</head>
+
+<body>
+<header>
+ <div class="logo">NELVARIS<span>TECHNOLOGIES</span></div>
+ <nav>
+  <a href="#about">О нас</a>
+  <a href="#services">Решения</a>
+  <a href="#contact">Контакты</a>
+ </nav>
+</header>
+
+<main>
+ <div class="hero">
+  <h1>NEL<span>VARIS</span></h1>
+  <p>Technology. Intelligence. Innovation.</p>
+  <p>Создаём программное обеспечение, цифровые продукты и технологии искусственного интеллекта.</p>
+  <a class="btn" href="#services">НАШИ РЕШЕНИЯ</a>
+ </div>
+
+ <section id="about">
+  <h2>О компании</h2>
+  <p>NELVARIS Technologies — независимый технологический проект, ориентированный на разработку программного обеспечения, AI-инструментов и современных цифровых решений.</p>
+ </section>
+
+ <section id="services">
+  <h2>Наши направления</h2>
+  <div class="cards">
+   <div class="card">
+    <h3>Artificial Intelligence</h3>
+    <p>Разработка интеллектуальных инструментов и AI-проектов.</p>
+   </div>
+   <div class="card">
+    <h3>Software Development</h3>
+    <p>Создание приложений и программного обеспечения.</p>
+   </div>
+   <div class="card">
+    <h3>Digital Technologies</h3>
+    <p>Современные цифровые продукты и технологии.</p>
+   </div>
+  </div>
+ </section>
+
+ <section id="contact">
+  <h2>Контакты</h2>
+  <p>Связь с NELVARIS Technologies</p>
+  <p>Скоро здесь появятся официальные контактные данные.</p>
+ </section>
+</main>
+
+<footer>
+ © 2026 NELVARIS Technologies. All rights reserved.
+</footer>
+</body>
+</html>
