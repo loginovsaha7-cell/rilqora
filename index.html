@@ -45,6 +45,38 @@ footer{padding:30px 8%;border-top:1px solid #1d3048;color:#8095ae;display:flex;j
  nav a{font-size:12px}
  section{padding:65px 6%}
 }
+ /* RGB EFFECT FOR NELVARIS ANTIVIRUS */
+.antivirus-card {
+    position: relative;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(145deg, #14243a, #0d1728) padding-box,
+        linear-gradient(
+            120deg,
+            #00eaff,
+            #8b5cff,
+            #ff36c7,
+            #00eaff
+        ) border-box;
+    background-size: 100% 100%, 300% 300%;
+    animation: rgbBorder 5s linear infinite;
+    box-shadow:
+        0 0 12px rgba(0,234,255,.25),
+        0 0 25px rgba(139,92,255,.15);
+}
+
+@keyframes rgbBorder {
+    0% { background-position: 0 0, 0% 50%; }
+    50% { background-position: 0 0, 100% 50%; }
+    100% { background-position: 0 0, 0% 50%; }
+}
+
+.antivirus-card:hover {
+    box-shadow:
+        0 0 18px rgba(0,234,255,.55),
+        0 0 35px rgba(255,54,199,.35);
+    transform: translateY(-5px);
+}
 </style>
 </head>
 <body>
@@ -93,7 +125,7 @@ data-ru="СКАЧАТЬ ДЛЯ WINDOWS →"
 data-en="DOWNLOAD FOR WINDOWS →">
 СКАЧАТЬ ДЛЯ WINDOWS →
 </a>
-  <article class="card">
+  <article class="card antivirus-card">
    <div class="symbol">✧</div>
    <span class="product-tag">AI PROJECT</span>
    <h3>NELVARIS AI</h3>
