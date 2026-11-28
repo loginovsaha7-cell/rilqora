@@ -5,52 +5,253 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080d1b">
 <meta name="description" content="NELVARIS Technologies — software, AI and digital innovation.">
+
 <title>NELVARIS Technologies</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#080d1b;color:#edf5ff;line-height:1.6}
-header{height:80px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1d3048;background:#080d1b;position:sticky;top:0;z-index:10}
-.logo{font-size:23px;font-weight:900;letter-spacing:2px;color:#55d9ff}
-.logo small{display:block;font-size:9px;letter-spacing:4px;color:#a9bdd4}
-nav{display:flex;align-items:center;gap:24px}
-nav a{color:#b9c9df;text-decoration:none;font-size:14px}
-nav a:hover{color:#55d9ff}
-.lang{background:#13243a;color:#55d9ff;border:1px solid #31516e;border-radius:7px;padding:8px 12px;cursor:pointer}
-.hero{min-height:570px;padding:100px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,#12375a 0%,#080d1b 68%)}
-.eyebrow{color:#55d9ff;letter-spacing:5px;font-size:12px;font-weight:bold}
-.hero h1{font-size:clamp(45px,9vw,88px);letter-spacing:5px;margin:18px 0}
-.hero h1 span{color:#55d9ff}
-.hero p{color:#afc1d8;max-width:650px;font-size:17px}
-.btn{display:inline-block;margin-top:28px;padding:13px 24px;border-radius:7px;background:#55d9ff;color:#071321;font-weight:bold;text-decoration:none;transition:.2s}
-.btn:hover{background:#a4edff;transform:translateY(-2px)}
-section{padding:85px 8%;scroll-margin-top:80px}
-.section-label{font-size:11px;letter-spacing:4px;color:#55d9ff}
-h2{font-size:34px;margin:8px 0 30px}
-.muted{color:#aabbd0;max-width:750px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:30px}
-.card{background:linear-gradient(145deg,#14243a,#0d1728);border:1px solid #263e5a;border-radius:13px;padding:26px;transition:.2s}
-.card:hover{border-color:#55d9ff;transform:translateY(-4px)}
-.card h3{color:#65ddff;margin:12px 0}
-.card p{color:#aabbd0;font-size:14px}
-.symbol{font-size:28px;color:#55d9ff}
-.product-tag{display:inline-block;color:#55d9ff;background:#102b42;border-radius:5px;padding:4px 9px;font-size:11px}
-.product-link{display:inline-block;color:#55d9ff;margin-top:18px;text-decoration:none;font-weight:bold}
-.about{background:#0c1525}
-.contact{background:#0c1525}
-footer{padding:30px 8%;border-top:1px solid #1d3048;color:#8095ae;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:13px}
-@media(max-width:650px){
- header{height:auto;padding:16px 5%;flex-wrap:wrap;gap:14px}
- nav{gap:13px;flex-wrap:wrap}
- nav a{font-size:12px}
- section{padding:65px 6%}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
- /* RGB EFFECT FOR NELVARIS ANTIVIRUS */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d1b;
+    color: #edf5ff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    min-height: 80px;
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #1d3048;
+    background: rgba(8,13,27,.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #55d9ff;
+}
+
+.logo small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #a9bdd4;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #b9c9df;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: #55d9ff;
+}
+
+.lang {
+    background: #13243a;
+    color: #55d9ff;
+    border: 1px solid #31516e;
+    border-radius: 7px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 590px;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background:
+        radial-gradient(ellipse at center,
+        #12375a 0%,
+        #080d1b 68%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(85,217,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(85,217,255,.035) 1px, transparent 1px);
+    background-size: 45px 45px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.hero > * {
+    position: relative;
+}
+
+.eyebrow {
+    color: #55d9ff;
+    letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 9vw, 88px);
+    letter-spacing: 5px;
+    margin: 18px 0;
+    text-shadow: 0 0 35px rgba(85,217,255,.25);
+}
+
+.hero h1 span {
+    color: #55d9ff;
+}
+
+.hero p {
+    color: #afc1d8;
+    max-width: 650px;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 13px 24px;
+    border-radius: 7px;
+    background: #55d9ff;
+    color: #071321;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .25s;
+    box-shadow: 0 0 20px rgba(85,217,255,.2);
+}
+
+.btn:hover {
+    background: #a4edff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(85,217,255,.5);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 85px 8%;
+    scroll-margin-top: 85px;
+}
+
+.section-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #55d9ff;
+}
+
+h2 {
+    font-size: 34px;
+    margin: 8px 0 30px;
+}
+
+.muted {
+    color: #aabbd0;
+    max-width: 750px;
+}
+
+/* APPLICATIONS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.card {
+    background: linear-gradient(145deg,#14243a,#0d1728);
+    border: 1px solid #263e5a;
+    border-radius: 15px;
+    padding: 27px;
+    transition: .3s;
+}
+
+.card:hover {
+    border-color: #55d9ff;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 35px rgba(0,200,255,.12);
+}
+
+.symbol {
+    font-size: 30px;
+    color: #55d9ff;
+}
+
+.product-tag {
+    display: inline-block;
+    color: #55d9ff;
+    background: #102b42;
+    border-radius: 5px;
+    padding: 4px 9px;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.card h3 {
+    color: #65ddff;
+    margin: 13px 0;
+}
+
+.card p {
+    color: #aabbd0;font-size: 14px;
+}
+
+.product-link {
+    display: inline-block;
+    color: #55d9ff;
+    margin-top: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.product-link:hover {
+    color: white;
+}
+
+/* RGB ANTIVIRUS CARD */
+
 .antivirus-card {
     position: relative;
     border: 2px solid transparent;
+
     background:
-        linear-gradient(145deg, #14243a, #0d1728) padding-box,
+        linear-gradient(145deg,#14243a,#0d1728) padding-box,
         linear-gradient(
             120deg,
             #00eaff,
@@ -58,133 +259,368 @@ footer{padding:30px 8%;border-top:1px solid #1d3048;color:#8095ae;display:flex;j
             #ff36c7,
             #00eaff
         ) border-box;
+
     background-size: 100% 100%, 300% 300%;
+
     animation: rgbBorder 5s linear infinite;
+
     box-shadow:
-        0 0 12px rgba(0,234,255,.25),
-        0 0 25px rgba(139,92,255,.15);
+        0 0 15px rgba(0,234,255,.25),
+        0 0 30px rgba(139,92,255,.15);
 }
 
 @keyframes rgbBorder {
-    0% { background-position: 0 0, 0% 50%; }
-    50% { background-position: 0 0, 100% 50%; }
-    100% { background-position: 0 0, 0% 50%; }
+    0% {
+        background-position: 0 0, 0% 50%;
+    }
+
+    50% {
+        background-position: 0 0, 100% 50%;
+    }
+
+    100% {
+        background-position: 0 0, 0% 50%;
+    }
 }
 
 .antivirus-card:hover {
+    transform: translateY(-7px);
+
     box-shadow:
-        0 0 18px rgba(0,234,255,.55),
-        0 0 35px rgba(255,54,199,.35);
-    transform: translateY(-5px);
+        0 0 20px rgba(0,234,255,.55),
+        0 0 40px rgba(255,54,199,.35);
+}
+
+/* ABOUT */
+
+.about {
+    background: #0c1525;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #0c1525;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 30px 8%;
+    border-top: 1px solid #1d3048;
+    color: #8095ae;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    animation: fadeIn 1s ease;
+}
+
+/* MOBILE */
+
+@media(max-width:650px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <header>
- <div class="logo">NELVARIS<small>TECHNOLOGIES</small></div>
- <nav>
-  <a href="#home" data-ru="Главная" data-en="Home">Главная</a>
-  <a href="#products" data-ru="Приложения" data-en="Apps">Приложения</a>
-  <a href="#about" data-ru="О компании" data-en="About">О компании</a>
-  <a href="#contact" data-ru="Контакты" data-en="Contact">Контакты</a>
-  <button class="lang" onclick="toggleLanguage()">EN</button>
- </nav>
+
+    <div class="logo">
+        NELVARIS
+        <small>TECHNOLOGIES</small>
+    </div>
+
+    <nav>
+        <a href="#home" data-ru="Главная" data-en="Home">Главная</a>
+        <a href="#products" data-ru="Приложения" data-en="Apps">Приложения</a>
+        <a href="#about" data-ru="О компании" data-en="About">О компании</a>
+        <a href="#contact" data-ru="Контакты" data-en="Contact">Контакты</a>
+
+        <button class="lang" onclick="toggleLanguage()">EN</button>
+    </nav>
+
 </header>
 
 <main>
+
+<!-- HERO -->
+
 <div class="hero" id="home">
- <div class="eyebrow">INNOVATION • SOFTWARE • AI</div>
- <h1>NEL<span>VARIS</span></h1>
- <p data-ru="Создаём программное обеспечение, цифровые продукты и современные технологические решения."
- data-en="Building software, digital products and modern technology solutions.">
- Создаём программное обеспечение, цифровые продукты и современные технологические решения.
- </p>
- <a class="btn" href="#products" data-ru="НАШИ ПРИЛОЖЕНИЯ ↓" data-en="OUR APPS ↓">НАШИ ПРИЛОЖЕНИЯ ↓</a>
+
+    <div class="eyebrow">
+        INNOVATION • SOFTWARE • AI
+    </div>
+
+    <h1>NEL<span>VARIS</span></h1>
+
+    <p
+    data-ru="Создаём программное обеспечение, цифровые продукты и современные технологические решения."
+    data-en="Building software, digital products and modern technology solutions.">
+
+    Создаём программное обеспечение, цифровые продукты и современные технологические решения.
+
+    </p>
+
+    <a class="btn"
+    href="#products"
+    data-ru="НАШИ ПРИЛОЖЕНИЯ ↓"
+    data-en="OUR APPS ↓">
+
+    НАШИ ПРИЛОЖЕНИЯ ↓
+
+    </a>
+
 </div>
 
+<!-- PRODUCTS -->
+
 <section id="products">
- <div class="section-label">NELVARIS ECOSYSTEM</div>
- <h2 data-ru="Наши приложения" data-en="Our Applications">Наши приложения</h2>
- <p class="muted" data-ru="Программы, созданные командой NELVARIS Technologies."
- data-en="Applications created by NELVARIS Technologies.">
- Программы, созданные командой NELVARIS Technologies.
- </p>
- <div class="cards">
-  <article class="card">
-   <div class="symbol">🛡</div>
-   <span class="product-tag">WINDOWS • BASIC 1.0</span>
-   <h3>NELVARIS Antivirus</h3>
-   <p data-ru="Базовое сканирование файлов, проверка расширений и создание отчётов безопасности."
-   data-en="Basic file scanning, extension checks and security reports.">
-   Базовое сканирование файлов, проверка расширений и создание отчётов безопасности.
-   </p>
-   <a class="product-link"
-href="downloads/NELVARIS%20Antivirus.exe"
-data-ru="СКАЧАТЬ ДЛЯ WINDOWS →"
-data-en="DOWNLOAD FOR WINDOWS →">
-СКАЧАТЬ ДЛЯ WINDOWS →
-</a>
-  <article class="card antivirus-card">
-   <div class="symbol">✧</div>
-   <span class="product-tag">AI PROJECT</span>
-   <h3>NELVARIS AI</h3>
-   <p data-ru="Проект интеллектуальных инструментов и технологий искусственного интеллекта."
-   data-en="A project focused on intelligent tools and artificial intelligence technologies.">
-   Проект интеллектуальных инструментов и технологий искусственного интеллекта.
-   </p>
-   <span class="product-link">COMING SOON</span>
-  </article>
 
-  <article class="card">
-   <div class="symbol">⌘</div>
-   <span class="product-tag">SOFTWARE</span>
-   <h3>NELVARIS Tools</h3>
-   <p data-ru="Коллекция полезных программ и инструментов для компьютеров."
-   data-en="A collection of useful computer programs and tools.">
-   Коллекция полезных программ и инструментов для компьютеров.
-   </p>
-   <span class="product-link">COMING SOON</span>
-  </article>
+    <div class="section-label">
+        NELVARIS ECOSYSTEM
+    </div>
 
- </div>
+    <h2 data-ru="Наши приложения" data-en="Our Applications">
+        Наши приложения
+    </h2>
+
+    <p class="muted"
+    data-ru="Программные продукты и технологии, созданные командой NELVARIS Technologies."
+    data-en="Software products and technologies created by NELVARIS Technologies.">
+
+    Программные продукты и технологии, созданные командой NELVARIS Technologies.
+
+    </p>
+
+    <div class="cards">
+
+        <!-- ANTIVIRUS -->
+
+        <article class="card antivirus-card">
+
+            <div class="symbol">🛡</div>
+            <span class="product-tag">
+                WINDOWS • BASIC 1.0
+            </span>
+
+            <h3>NELVARIS Antivirus</h3>
+
+            <p
+            data-ru="Базовое сканирование файлов, проверка расширений и создание отчётов безопасности."
+            data-en="Basic file scanning, extension checks and security reports.">
+
+            Базовое сканирование файлов, проверка расширений и создание отчётов безопасности.
+
+            </p>
+
+            <a class="product-link"
+            href="downloads/NELVARIS%20Antivirus.exe"
+            data-ru="СКАЧАТЬ ДЛЯ WINDOWS →"
+            data-en="DOWNLOAD FOR WINDOWS →">
+
+            СКАЧАТЬ ДЛЯ WINDOWS →
+
+            </a>
+
+        </article>
+
+        <!-- AI -->
+
+        <article class="card">
+
+            <div class="symbol">✧</div>
+
+            <span class="product-tag">
+                AI PROJECT
+            </span>
+
+            <h3>NELVARIS AI</h3>
+
+            <p
+            data-ru="Проект интеллектуальных инструментов и технологий искусственного интеллекта."
+            data-en="A project focused on intelligent tools and artificial intelligence technologies.">
+
+            Проект интеллектуальных инструментов и технологий искусственного интеллекта.
+
+            </p>
+
+            <span class="product-link">
+                COMING SOON
+            </span>
+
+        </article>
+
+        <!-- TOOLS -->
+
+        <article class="card">
+
+            <div class="symbol">⌘</div>
+
+            <span class="product-tag">
+                SOFTWARE
+            </span>
+
+            <h3>NELVARIS Tools</h3>
+
+            <p
+            data-ru="Коллекция полезных программ и инструментов для компьютеров."
+            data-en="A collection of useful computer programs and tools.">
+
+            Коллекция полезных программ и инструментов для компьютеров.
+
+            </p>
+
+            <span class="product-link">
+                COMING SOON
+            </span>
+
+        </article>
+
+    </div>
+
 </section>
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
- <div class="section-label">WHO WE ARE</div>
- <h2 data-ru="О NELVARIS" data-en="About NELVARIS">О NELVARIS</h2>
- <p class="muted"
- data-ru="NELVARIS Technologies — независимый технологический проект, посвящённый разработке программного обеспечения, AI-инструментов и цифровых решений. Наша цель — создавать полезные и современные продукты."
- data-en="NELVARIS Technologies is an independent technology project focused on software development, AI tools and digital solutions. Our goal is to build useful and modern products.">
- NELVARIS Technologies — независимый технологический проект, посвящённый разработке программного обеспечения, AI-инструментов и цифровых решений. Наша цель — создавать полезные и современные продукты.
- </p>
+
+    <div class="section-label">
+        WHO WE ARE
+    </div>
+
+    <h2 data-ru="О NELVARIS" data-en="About NELVARIS">
+        О NELVARIS
+    </h2>
+
+    <p class="muted"
+    data-ru="NELVARIS Technologies — независимый технологический проект, посвящённый разработке программного обеспечения, AI-инструментов и цифровых решений. Наша цель — создавать полезные и современные продукты."
+    data-en="NELVARIS Technologies is an independent technology project focused on software development, AI tools and digital solutions. Our goal is to build useful and modern products.">
+
+    NELVARIS Technologies — независимый технологический проект, посвящённый разработке программного обеспечения, AI-инструментов и цифровых решений. Наша цель — создавать полезные и современные продукты.
+
+    </p>
+
 </section>
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
- <div class="section-label">GET IN TOUCH</div>
- <h2 data-ru="Контакты" data-en="Contact">Контакты</h2>
- <p class="muted" data-ru="По вопросам сотрудничества и наших продуктов следите за обновлениями."
- data-en="Follow our updates for product news and collaboration opportunities.">
- По вопросам сотрудничества и наших продуктов следите за обновлениями.
- </p>
+
+    <div class="section-label">
+        GET IN TOUCH
+    </div>
+
+    <h2 data-ru="Контакты" data-en="Contact">
+        Контакты
+    </h2>
+
+    <p class="muted"
+    data-ru="По вопросам сотрудничества и наших продуктов следите за обновлениями."
+    data-en="Follow our updates for product news and collaboration opportunities.">
+
+    По вопросам сотрудничества и наших продуктов следите за обновлениями.
+
+    </p>
+
 </section>
+
 </main>
 
+<!-- FOOTER -->
+
 <footer>
- <span>© 2026 NELVARIS Technologies</span>
- <span>INNOVATION • SOFTWARE • AI</span>
+
+    <span>
+        © 2026 NELVARIS Technologies
+    </span>
+
+    <span>
+        INNOVATION • SOFTWARE • AI
+    </span>
+
 </footer>
 
 <script>
-let currentLanguage="ru";
-function toggleLanguage(){
- currentLanguage=currentLanguage==="ru"?"en":"ru";
- document.documentElement.lang=currentLanguage;
- document.querySelector(".lang").textContent=currentLanguage==="ru"?"EN":"RU";
- document.querySelectorAll("[data-ru]").forEach(element=>{
-  element.textContent=element.dataset[currentLanguage];
- });
+
+let currentLanguage = "ru";
+
+function toggleLanguage() {
+
+    currentLanguage =
+        currentLanguage === "ru" ? "en" : "ru";
+
+    document.documentElement.lang = currentLanguage;
+
+    document.querySelector(".lang").textContent =
+        currentLanguage === "ru" ? "EN" : "RU";
+
+    document.querySelectorAll("[data-ru]").forEach(element => {
+
+        element.textContent =
+            element.dataset[currentLanguage];
+
+    });
+
 }
+
 </script>
+
 </body>
 </html>
